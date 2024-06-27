@@ -1,0 +1,465 @@
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f3f0e9;
+}
+
+/* .wrapper {
+  max-width: 1200px;
+  margin: 0;
+  padding: 0;
+} */
+
+header {
+  background-color: #000000;
+  padding: 10px;
+}
+
+.logo {
+  width: 60%;
+  margin: auto auto;
+}
+
+header nav {
+  text-align: center;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  margin-right: 29px;
+}
+header nav ul li {
+  list-style-type: none;
+  margin: 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.hero-section {
+  position: relative;
+  background: url(/images/hero-background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -20px;
+  height: 400px;
+  text-align: center;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-section .content {
+  position: relative;
+  z-index: 2;
+  opacity: 0; /* Start hidden */
+  transform: translateY(-50px); /* Start slightly above the final position */
+  animation: dropDown 1s ease-in-out forwards; /* Apply the animation */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.content h1 {
+  font-weight: bolder;
+  margin-top: 40px;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.content p {
+  color: #fff;
+  margin: 20px 0;
+  margin-top: 20px;
+  width: 80%;
+}
+
+.content button {
+  width: 200px;
+  /* margin: 0; */
+  padding: 15px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+/* Keyframes for the drop-down animation */
+@keyframes dropDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.coffee-show {
+  background-color: #f3f0e9;
+  margin-top: -10px;
+  padding: 15px;
+}
+
+.coffee-show > p {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #d69e3d;
+  /* margin-left: 5px; */
+  /* margin-top: 0px; */
+}
+
+.coffee-show > h1 {
+  width: 90%;
+  /* margin-left: 10px; */
+}
+
+.top-image {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.coffee-pics img {
+  width: 100%;
+  margin: auto auto;
+}
+.coffee-pics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* width: 80%; */
+  gap: 10px;
+}
+
+.offers {
+  text-align: center;
+}
+
+.offers-img {
+  /* width: 80%; */
+  margin: auto;
+  text-align: center;
+}
+
+.offers-img p {
+  width: 85%;
+  margin: auto;
+}
+
+.locations {
+  position: relative;
+  background: url(/images/coffee-shop.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* margin-top: -20px; */
+  height: 500px;
+  text-align: center;
+}
+
+.locations::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.locations .content {
+  position: relative;
+  z-index: 2;
+  opacity: 0; /* Start hidden */
+  transform: translateY(-50px); /* Start slightly above the final position */
+  animation: dropDown 1s ease-in-out forwards; /* Apply the animation */
+}
+
+.locations div:first-child {
+  padding-top: 18px;
+  margin-top: 20px;
+}
+
+.locations div:first-child > h1 {
+  color: #d69e3d;
+}
+
+.locations div:first-child > h2 {
+  color: #fff;
+  font-weight: bolder;
+  width: 80%;
+  margin: auto;
+}
+
+.locations div:first-child > button {
+  background-color: #fff;
+  padding: 15px;
+  width: 200px;
+  color: #000000;
+  margin-top: 10px;
+  font-weight: bolder;
+  border: none;
+}
+
+.locations div:last-child h1 {
+  color: #d69e3d;
+}
+
+.locations div:last-child > h2 {
+  color: #fff;
+  font-weight: bolder;
+  width: 80%;
+  margin: auto;
+}
+
+.locations div:last-child > button {
+  background-color: transparent;
+  padding: 15px;
+  color: #fff;
+  margin-top: 10px;
+  font-weight: bolder;
+  border: 2px solid #fff;
+  cursor: pointer;
+  width: 200px;
+  /* transition: background-color 0.3s ease, color 0.3s ease; */
+}
+
+.about img {
+  width: 100%;
+  margin-top: 80px;
+}
+.about-content {
+  margin-bottom: 50px;
+  margin-left: 10px;
+}
+
+.about-content h2 {
+  font-size: 16px;
+  color: #d69e3d;
+}
+.about-content > button {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px;
+}
+
+.testimonials {
+  background-color: #000000;
+  padding: 10px;
+  color: #f3f0e9;
+}
+
+.testimonials > p {
+  color: #d69e3d;
+}
+
+.testimonials h1 {
+  width: 80%;
+  padding: 20px;
+  margin-left: -15px;
+}
+
+.Jane {
+  position: relative;
+  background: url(/images/testimonial-1.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -20px;
+  height: 400px;
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: #000000;
+}
+
+.Scott {
+  position: relative;
+  background: url(/images/testimonial-2.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -20px;
+  height: 500px;
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: #000000;
+}
+
+.Susie {
+  position: relative;
+  background: url(/images/testimonial-3.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -20px;
+  height: 450px;
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: #000000;
+}
+
+.Jane::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.Scott::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.Susie::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.Jane .content {
+  position: relative;
+  z-index: 2;
+  opacity: 0; /* Start hidden */
+  transform: translateY(-50px); /* Start slightly above the final position */
+  animation: dropDown 1s ease-in-out forwards; /* Apply the animation */
+}
+
+.Scott .content {
+  position: relative;
+  z-index: 2;
+  opacity: 0; /* Start hidden */
+  transform: translateY(-50px); /* Start slightly above the final position */
+  animation: dropDown 1s ease-in-out forwards; /* Apply the animation */
+}
+
+.Susie .content {
+  position: relative;
+  z-index: 2;
+  opacity: 0; /* Start hidden */
+  transform: translateY(-50px); /* Start slightly above the final position */
+  animation: dropDown 1s ease-in-out forwards; /* Apply the animation */
+}
+
+.Jane .content > p {
+  margin-top: 300px;
+  text-align: left;
+  width: 95%;
+  font-size: 14px;
+}
+
+.Scott .content > p {
+  margin-top: 400px;
+  text-align: left;
+  width: 95%;
+  font-size: 14px;
+}
+
+.Susie .content > p {
+  margin-top: 400px;
+  text-align: left;
+  width: 95%;
+  font-size: 14px;
+}
+
+.Jane .content > h4 {
+  color: #d69e3d;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-left: -220px;
+}
+
+.Scott .content > h4 {
+  color: #d69e3d;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-left: -200px;
+}
+
+.Susie .content > h4 {
+  color: #d69e3d;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-left: -200px;
+}
+
+footer {
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  margin-top: -10px;
+  padding: 10px;
+}
+/* Tablet Styles (min-width: 768px) */
+@media (min-width: 768px) {
+  /* body {
+    background-color: aqua;
+  }
+  main {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+  } */
+}
+
+/* Desktop Styles (min-width: 1100px) */
+@media (min-width: 1100px) {
+  body {
+    background-color: brown;
+  }
+  */ header nav ul {
+    justify-content: space-between;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h1 {
+  animation: fadeIn 1s ease-in-out;
+}

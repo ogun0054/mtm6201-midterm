@@ -1,16 +1,17 @@
 body {
-  font-family: "Karla", sans-serif;
+  /* font-family: "Karla", sans-serif; */
+  font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #f3f0e9;
 }
 
-/* .wrapper {
+.wrapper {
   max-width: 1200px;
   margin: 0;
   padding: 0;
-} */
+}
 
 header {
   background-color: #000000;
@@ -34,12 +35,14 @@ header nav ul {
 header nav ul li {
   list-style-type: none;
   margin: 10px;
+  font-family: "Lato", sans-serif;
 }
 
 header nav ul li a {
   text-decoration: none;
   color: #fff;
   font-weight: bolder;
+  font-family: "Lato", sans-serif;
 }
 
 .hero-section {
@@ -283,7 +286,7 @@ header nav ul li a {
   background-position: center;
   background-repeat: no-repeat;
   margin-top: -20px;
-  height: 400px;
+  height: 500px;
   text-align: center;
   margin-bottom: 40px;
   background-color: #000000;
@@ -425,6 +428,27 @@ footer {
 }
 /* Tablet Styles (min-width: 768px) */
 @media (min-width: 768px) {
+  .coffee-show > h1 {
+    width: 45%;
+    font-weight: 800;
+  }
+  .coffee-show .pics {
+    display: flex;
+    /* justify-content: space-around; */
+    width: 80%;
+
+    margin: auto auto;
+  }
+
+  .pics div:first-child {
+    padding: -100px;
+  }
+
+  .coffee-pics {
+    margin: 10px;
+    /* padding: 4px; */
+  }
+
   /* body {
     background-color: aqua;
   }
@@ -442,11 +466,116 @@ footer {
 
 /* Desktop Styles (min-width: 1100px) */
 @media (min-width: 1100px) {
-  body {
-    background-color: brown;
+  .wrapper {
+    width: 100%;
+    margin: auto auto;
   }
-  */ header nav ul {
+
+  nav {
+    display: flex;
     justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo {
+    width: 200px;
+    margin-left: 100px;
+  }
+
+  header nav ul {
+    justify-content: space-between;
+  }
+
+  .offers-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto auto;
+  }
+
+  .offers-div > div img {
+    width: 50%;
+  }
+
+  .locations .contents {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto auto;
+  }
+
+  .contents div:last-child {
+    margin-top: 40px;
+  }
+
+  .about {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 80%;
+    margin: auto auto;
+  }
+
+  .about div:first-child {
+    width: 100%;
+  }
+
+  .about div:last-child {
+    width: 100%;
+    margin-top: 100px;
+    font-size: 10px;
+  }
+
+  .content h1 {
+    font-weight: bolder;
+    margin-top: 40px;
+    color: #fff;
+    margin-bottom: 0;
+    width: 25%;
+  }
+
+  .content p {
+    color: #fff;
+    margin: 20px 0;
+    margin-top: 20px;
+    width: 55%;
+  }
+
+  .testimonial-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto auto;
+  }
+
+  .testimonial-div > div {
+    margin: 20px;
+    width: 100%;
+  }
+  .Jane .content > h4 {
+    color: #d69e3d;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-left: -200px;
+  }
+
+  .Scott .content > h4 {
+    color: #d69e3d;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-left: -200px;
+  }
+
+  .Susie .content > h4 {
+    color: #d69e3d;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-left: -200px;
   }
 }
 

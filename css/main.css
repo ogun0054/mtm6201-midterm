@@ -7,6 +7,21 @@ body {
   background-color: #f3f0e9;
 }
 
+h1 {
+  font-size: 2.027rem;
+}
+
+h2 {
+  font-size: 1.802rem;
+}
+
+h3 {
+  font-size: 1.424rem;
+}
+
+p {
+  font-size: 16px;
+}
 .wrapper {
   max-width: 1200px;
   margin: 0;
@@ -45,6 +60,21 @@ header nav ul li a {
   font-family: "Lato", sans-serif;
 }
 
+header nav ul li a:hover {
+  color: #d69e3d;
+}
+
+.content > button {
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.content > button:hover {
+  background-color: #d69e3d;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
 .hero-section {
   position: relative;
   background: url(/images/hero-background.jpg);
@@ -70,9 +100,9 @@ header nav ul li a {
 .hero-section .content {
   position: relative;
   z-index: 2;
-  opacity: 0; /* Start hidden */
-  transform: translateY(-50px); /* Start slightly above the final position */
-  animation: dropDown 1s ease-in-out forwards; /* Apply the animation */
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: dropDown 1s ease-in-out forwards;
 }
 
 .content {
@@ -85,10 +115,10 @@ header nav ul li a {
 }
 
 .content h1 {
-  font-weight: bolder;
   margin-top: 40px;
   color: #fff;
   margin-bottom: 0;
+  width: 60%;
 }
 
 .content p {
@@ -128,7 +158,7 @@ header nav ul li a {
   /* margin-top: 0px; */
 }
 
-.coffee-show > h1 {
+.coffee-show > h2 {
   width: 90%;
   /* margin-left: 10px; */
 }
@@ -190,9 +220,9 @@ header nav ul li a {
 .locations .content {
   position: relative;
   z-index: 2;
-  opacity: 0; /* Start hidden */
-  transform: translateY(-50px); /* Start slightly above the final position */
-  animation: dropDown 1s ease-in-out forwards; /* Apply the animation */
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: dropDown 1s ease-in-out forwards;
 }
 
 .locations div:first-child {
@@ -219,7 +249,18 @@ header nav ul li a {
   margin-top: 10px;
   font-weight: bolder;
   border: none;
+  cursor: pointer;
 }
+
+button:hover {
+  background-color: #d69e3d !important;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+/* .content > button {
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
+} */
 
 .locations div:last-child h1 {
   color: #d69e3d;
@@ -312,7 +353,7 @@ header nav ul li a {
   background-position: center;
   background-repeat: no-repeat;
   margin-top: -20px;
-  height: 450px;
+  height: 500px;
   text-align: center;
   margin-bottom: 40px;
   background-color: #000000;
@@ -353,25 +394,25 @@ header nav ul li a {
 .Jane .content {
   position: relative;
   z-index: 2;
-  opacity: 0; /* Start hidden */
-  transform: translateY(-50px); /* Start slightly above the final position */
-  animation: dropDown 1s ease-in-out forwards; /* Apply the animation */
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: dropDown 1s ease-in-out forwards;
 }
 
 .Scott .content {
   position: relative;
   z-index: 2;
-  opacity: 0; /* Start hidden */
-  transform: translateY(-50px); /* Start slightly above the final position */
-  animation: dropDown 1s ease-in-out forwards; /* Apply the animation */
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: dropDown 1s ease-in-out forwards;
 }
 
 .Susie .content {
   position: relative;
   z-index: 2;
-  opacity: 0; /* Start hidden */
-  transform: translateY(-50px); /* Start slightly above the final position */
-  animation: dropDown 1s ease-in-out forwards; /* Apply the animation */
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: dropDown 1s ease-in-out forwards;
 }
 
 .Jane .content > p {
@@ -428,6 +469,22 @@ footer {
 }
 /* Tablet Styles (min-width: 768px) */
 @media (min-width: 768px) {
+  h1 {
+    font-size: 2.986rem;
+  }
+
+  h2 {
+    font-size: 2.488rem;
+  }
+
+  h3 {
+    font-size: 1.728rem;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
   .coffee-show > h1 {
     width: 45%;
     font-weight: 800;
@@ -449,23 +506,166 @@ footer {
     /* padding: 4px; */
   }
 
-  /* body {
-    background-color: aqua;
-  }
-  main {
+  .offers-div {
     display: flex;
-    justify-content: space-around;
-    text-align: left;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
 
-  header nav ul {
+  .offers-div .offers-img {
+    flex: 1 1 calc(50% - 10px);
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .offers-div .offers-img:nth-child(3) {
+    flex: 1 1 70%;
+    text-align: center;
+  }
+
+  .offers-img > p {
+    width: 50%;
+  }
+
+  .locations {
+    position: relative;
+    background: url(/images/coffee-shop.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* margin-top: -20px; */
+    height: auto;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .testimonials {
+    background-color: #000000;
+    padding: 10px;
+    color: #f3f0e9;
+  }
+
+  .testimonials > p {
+    color: #d69e3d;
+  }
+
+  .testimonials h1 {
+    width: 80%;
+    padding: 20px;
+    margin-left: -15px;
+  }
+
+  .testimonial-div {
     display: flex;
-    justify-content: space-between;
-  } */
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .testimonial-div > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .Jane,
+  .Scott,
+  .Susie {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    text-align: center;
+    background-color: #000000;
+  }
+
+  .Susie {
+    height: 450px;
+  }
+
+  .Jane::before,
+  .Scott::before,
+  .Susie::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .Jane .content,
+  .Scott .content,
+  .Susie .content {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: dropDown 1s ease-in-out forwards;
+  }
+
+  .Jane .content > p,
+  .Scott .content > p,
+  .Susie .content > p {
+    margin-top: auto;
+    text-align: left;
+    width: 95%;
+    font-size: 14px;
+  }
+
+  .Jane .content > h4,
+  .Scott .content > h4,
+  .Susie .content > h4 {
+    color: #d69e3d;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+
+  .Jane .content > h4 {
+    margin-left: -220px;
+  }
+
+  .Scott .content > h4 {
+    margin-left: -200px;
+  }
+
+  .Susie .content > h4 {
+    margin-left: -200px;
+  }
+
+  /* Keyframes for drop-down animation */
+  @keyframes dropDown {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 /* Desktop Styles (min-width: 1100px) */
 @media (min-width: 1100px) {
+  h1 {
+    font-size: 3.815rem;
+  }
+
+  h2 {
+    font-size: 3.052rem;
+  }
+
+  h3 {
+    font-size: 1.953rem;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
   .wrapper {
     width: 100%;
     margin: auto auto;
@@ -474,6 +674,10 @@ footer {
   nav {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+  }
+
+  .contents h1 {
     width: 100%;
   }
 
@@ -489,13 +693,34 @@ footer {
   .offers-div {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    width: 80%;
-    margin: auto auto;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    /* background-color: #f3f0e9; Example background color */
   }
 
-  .offers-div > div img {
-    width: 50%;
+  .offers-img {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    /* background-color: #ffffff; */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .offers-img img {
+    margin-bottom: 10px;
+  }
+
+  .offers-img h3 {
+    margin-bottom: 10px;
+    color: #333333;
+  }
+
+  .offers-img p {
+    color: #666666;
+    font-size: 14px;
   }
 
   .locations .contents {
@@ -532,21 +757,21 @@ footer {
     margin-top: 40px;
     color: #fff;
     margin-bottom: 0;
-    width: 25%;
+    width: 60%;
   }
 
   .content p {
     color: #fff;
     margin: 20px 0;
     margin-top: 20px;
-    width: 55%;
+    width: 50%;
   }
 
   .testimonial-div {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 80%;
+    width: 100%;
     margin: auto auto;
   }
 
@@ -554,12 +779,55 @@ footer {
     margin: 20px;
     width: 100%;
   }
+
+  .Jane {
+    position: relative;
+    background: url(/images/testimonial-1.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+    height: 500px;
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #000000;
+  }
+
+  .Scott {
+    position: relative;
+    background: url(/images/testimonial-2.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+    height: 500px;
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #000000;
+  }
+
+  .Susie {
+    position: relative;
+    background: url(/images/testimonial-3.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+    height: 500px;
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #000000;
+  }
+
+  .Jane .content > p {
+    margin-top: 400px;
+  }
   .Jane .content > h4 {
     color: #d69e3d;
     text-align: left;
     text-transform: uppercase;
     margin-top: 0;
-    margin-left: -200px;
+    margin-left: -160px;
   }
 
   .Scott .content > h4 {
@@ -567,7 +835,7 @@ footer {
     text-align: left;
     text-transform: uppercase;
     margin-top: 0;
-    margin-left: -200px;
+    margin-left: -160px;
   }
 
   .Susie .content > h4 {
@@ -575,7 +843,7 @@ footer {
     text-align: left;
     text-transform: uppercase;
     margin-top: 0;
-    margin-left: -200px;
+    margin-left: -160px;
   }
 }
 
